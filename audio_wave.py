@@ -7,7 +7,7 @@ class AudioWave:
         self.audio = AudioSegment.from_wav(audio_path)
         self.audio_chunks = split_on_silence(
             audio_segment=self.audio,
-            min_silence_len=500,
+            min_silence_len=400,
             silence_thresh=-40,
             keep_silence=500
         )
